@@ -49,14 +49,11 @@ public abstract class Piece {
      * @param type 1 or 0.
      */
     public Piece(final int type) {
-        if (type == 0) {
+        if (type == BLACK) {
             setBPiece();
         }
-        if (type == 1) {
+        if (type == WHITE) {
             setWPiece();
-        }
-        if (type != 0 || type != 0) {
-            //error handling here
         }
     }
 

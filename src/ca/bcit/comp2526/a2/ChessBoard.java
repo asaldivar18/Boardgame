@@ -65,6 +65,7 @@ public class ChessBoard extends JFrame implements Board {
     }
     
     /**
+     * Sets tiles
      * Creates and add adds a Mouse listener.
      */
     private void createTiles() {
@@ -85,11 +86,11 @@ public class ChessBoard extends JFrame implements Board {
                 
                 //mouse listener is made.
                 b.addMouseListener(new MouseAdapter() {
-                    @Override
                     /**
-                     * mouseClicked event handler.
-                     * @param ex MouseEvent
-                     */
+                    * mouseClicked event handler.
+                    * @param ex MouseEvent
+                    */
+                    @Override
                     public void mouseClicked(final MouseEvent ex) {
                         final Point set = new Point(b.getTiles_i(), b.getTiles_j());
                         if (temp == null && tile[(int) set.getX()][(int) set.getY()].empty 
@@ -116,7 +117,6 @@ public class ChessBoard extends JFrame implements Board {
                             tile[(int) temp.getX()][(int) temp.getY()].empty = true;
                             temp = null;
                         }
-
                     }
                 });
                 tile[i][j] = b;
